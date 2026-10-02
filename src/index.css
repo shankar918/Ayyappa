@@ -1,0 +1,579 @@
+/* ==========================================================================
+   Ayyappa Devotional E-Commerce - Sacred Temple Theme Stylesheet
+   Fonts: Cinzel (Display/Headings), Lato (Body)
+   Palette: Deep Temple Navy (#071A2B), Sacred Gold (#D4A72C), Warm Cream (#FFF8E7)
+   ========================================================================== */
+
+:root {
+  --color-temple-navy: #071A2B;
+  --color-secondary-navy: #0D2638;
+  --color-card-navy: #102F43;
+  --color-sacred-gold: #D4A72C;
+  --color-bright-gold: #F5C542;
+  --color-saffron: #E87522;
+  --color-maroon: #6E1F1F;
+  --color-warm-cream: #FFF8E7;
+  --color-cream-soft: #FCF9F2;
+  --color-body-text: #495057;
+  --color-muted-text: #6C757D;
+  --color-light-border: #E8DFD1;
+  --color-gold-border: rgba(212, 167, 44, 0.35);
+  
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+  
+  --shadow-subtle: 0 4px 20px rgba(7, 26, 43, 0.06);
+  --shadow-hover: 0 12px 32px rgba(7, 26, 43, 0.12);
+  --shadow-gold: 0 8px 24px rgba(212, 167, 44, 0.2);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Typographic Rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-body-text);
+  background-color: var(--color-cream-soft);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-cinzel {
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+  color: var(--color-temple-navy);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+p, span, li, button, input, textarea, select {
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--color-sacred-gold);
+}
+
+/* Custom Devotional Gold & Temple Utilities */
+.bg-temple-navy {
+  background-color: var(--color-temple-navy) !important;
+}
+
+.bg-secondary-navy {
+  background-color: var(--color-secondary-navy) !important;
+}
+
+.bg-card-navy {
+  background-color: var(--color-card-navy) !important;
+}
+
+.bg-warm-cream {
+  background-color: var(--color-warm-cream) !important;
+}
+
+.bg-cream-soft {
+  background-color: var(--color-cream-soft) !important;
+}
+
+.text-temple-navy {
+  color: var(--color-temple-navy) !important;
+}
+
+.text-sacred-gold {
+  color: var(--color-sacred-gold) !important;
+}
+
+.text-bright-gold {
+  color: var(--color-bright-gold) !important;
+}
+
+.text-saffron {
+  color: var(--color-saffron) !important;
+}
+
+.text-maroon {
+  color: var(--color-maroon) !important;
+}
+
+/* Borders */
+.border-gold {
+  border: 1px solid var(--color-sacred-gold) !important;
+}
+
+.border-gold-subtle {
+  border: 1px solid var(--color-gold-border) !important;
+}
+
+.border-light-cream {
+  border: 1px solid var(--color-light-border) !important;
+}
+
+/* Sacred Buttons */
+.btn-sacred-gold {
+  background: linear-gradient(135deg, #D4A72C 0%, #F5C542 100%);
+  color: var(--color-temple-navy);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(212, 167, 44, 0.25);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-sacred-gold:hover {
+  background: linear-gradient(135deg, #F5C542 0%, #D4A72C 100%);
+  color: var(--color-temple-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 167, 44, 0.38);
+}
+
+.btn-sacred-outline {
+  background: transparent;
+  color: var(--color-sacred-gold);
+  border: 1.5px solid var(--color-sacred-gold);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.6rem 1.35rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-sacred-outline:hover {
+  background: var(--color-sacred-gold);
+  color: var(--color-temple-navy);
+  border-color: var(--color-sacred-gold);
+  transform: translateY(-2px);
+}
+
+.btn-temple-navy {
+  background-color: var(--color-temple-navy);
+  color: #FFFFFF;
+  border: 1px solid rgba(212, 167, 44, 0.4);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-temple-navy:hover {
+  background-color: var(--color-secondary-navy);
+  border-color: var(--color-sacred-gold);
+  color: var(--color-bright-gold);
+}
+
+/* Badge & Indicators */
+.badge-sacred-gold {
+  background-color: rgba(212, 167, 44, 0.15);
+  color: #B28315;
+  border: 1px solid rgba(212, 167, 44, 0.35);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+}
+
+.badge-saffron {
+  background-color: rgba(232, 117, 34, 0.12);
+  color: #C25B10;
+  border: 1px solid rgba(232, 117, 34, 0.3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+}
+
+/* Navbar */
+.devotional-navbar {
+  background-color: var(--color-temple-navy);
+  border-bottom: 2px solid var(--color-sacred-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: padding 0.25s ease, background-color 0.25s ease;
+  z-index: 1040;
+}
+
+.devotional-navbar.scrolled {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.nav-link-devotional {
+  color: #F8F9FA !important;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem !important;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.nav-link-devotional:hover,
+.nav-link-devotional.active {
+  color: var(--color-bright-gold) !important;
+}
+
+.nav-link-devotional::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-bright-gold);
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link-devotional:hover::after,
+.nav-link-devotional.active::after {
+  width: 70%;
+}
+
+.nav-icon-btn {
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  font-size: 1.15rem;
+  padding: 0.45rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.nav-icon-btn:hover {
+  color: var(--color-bright-gold);
+  transform: translateY(-1px);
+}
+
+.nav-badge-count {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  background: var(--color-saffron);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-temple-navy);
+}
+
+/* Product Card */
+.devotional-product-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(212, 167, 44, 0.18);
+  box-shadow: 0 4px 16px rgba(7, 26, 43, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.devotional-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(7, 26, 43, 0.12);
+  border-color: var(--color-sacred-gold);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 85%; /* Fixed aspect ratio ~4:3.4 */
+  background: #F9F7F2;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.devotional-product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+.product-quick-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+}
+
+.action-circle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 167, 44, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-temple-navy);
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.action-circle-btn:hover {
+  background: var(--color-sacred-gold);
+  color: var(--color-temple-navy);
+  transform: scale(1.1);
+}
+
+.action-circle-btn.active {
+  background: #FFF1F1;
+  color: #D32F2F;
+  border-color: #F8B4B4;
+}
+
+/* Category Card */
+.category-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-light-border);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  position: relative;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(7, 26, 43, 0.12);
+  border-color: var(--color-sacred-gold);
+}
+
+.category-img-box {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-card-navy);
+}
+
+.category-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-img-box img {
+  transform: scale(1.08);
+}
+
+/* Devotional Hero */
+.devotional-hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-temple-navy);
+  overflow: hidden;
+}
+
+.hero-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.45;
+  filter: brightness(0.85);
+  transition: transform 12s ease-out;
+}
+
+.hero-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(7, 26, 43, 0.94) 0%,
+    rgba(13, 38, 56, 0.8) 50%,
+    rgba(7, 26, 43, 0.92) 100%
+  );
+}
+
+.hero-gold-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 167, 44, 0.25) 0%, rgba(7, 26, 43, 0) 70%);
+  top: 20%;
+  right: 5%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* Trust Strip */
+.trust-strip {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-light-border);
+  box-shadow: 0 4px 12px rgba(7, 26, 43, 0.03);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0.5rem;
+}
+
+.trust-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(212, 167, 44, 0.12);
+  border: 1px solid rgba(212, 167, 44, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sacred-gold);
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+/* Modals & Dialogs */
+.devotional-modal-content {
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-sacred-gold);
+  box-shadow: 0 20px 50px rgba(7, 26, 43, 0.3);
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1ECE1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C49F3A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A68224;
+}
+
+/* Floating Temple Deepam Lamp Animation */
+@keyframes flicker {
+  0%, 100% { opacity: 0.95; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.97); }
+}
+
+.flicker-flame {
+  animation: flicker 2.4s ease-in-out infinite;
+}
+
+/* Devotional Divider */
+.devotional-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.devotional-divider::before,
+.devotional-divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  max-width: 140px;
+  background: linear-gradient(90deg, transparent, var(--color-sacred-gold), transparent);
+}
+
+/* Tabular numerals for prices */
+.price-display {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Footer */
+.devotional-footer {
+  background-color: var(--color-temple-navy);
+  border-top: 3px solid var(--color-sacred-gold);
+  color: #ECEFF1;
+}
+
+.footer-link {
+  color: #CBD5E1;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--color-bright-gold);
+  transform: translateX(3px);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Ayyappa Devotional Store",
+  "description": "Premium Ayyappa Swamy devotional e-commerce platform offering sacred idols, pooja essentials, malas, rudraksha, and Sabarimala pilgrimage items.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
